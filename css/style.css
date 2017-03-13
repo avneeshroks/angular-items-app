@@ -1,0 +1,21 @@
+body {
+  font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size: 24px;
+}
+
+.header {
+  min-height: 100px;
+}
+
+.item-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid rgba(86,61,124,.2);
+  padding: 6px;
+}
+
+.title {
+  font-size: 16px;
+  margin-top: 7px;
+}
