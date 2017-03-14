@@ -6,15 +6,15 @@
 	function itemDetail() {
 		var directive = {
 			link: link,
-			templateUrl: '/js/templates/detail.html',
+			templateUrl: 'js/templates/detail.html',
 			restrict: 'E',
-      controller: DetailCtrl,
-      controllerAs: item,
+      controller: 'DetailCtrl',
+      controllerAs: 'item',
 		};
 		return directive;
 
-		function link(scope, element, attrs) {
-		/* */
+		function link(scope, element, attrs, controller) {
+			
 		}
 	}
 })();
