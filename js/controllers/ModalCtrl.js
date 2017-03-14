@@ -8,12 +8,20 @@
 
     $ctrl.item = item;
 
-    $ctrl.ok = function () {
-      $uibModalInstance.close($ctrl.selected.item);
+    $ctrl.delete = function () {
+      var data = {
+        item : $ctrl.item,
+        action : 'DELETE',
+      };
+      $uibModalInstance.close(data);
     };
 
-    $ctrl.cancel = function () {
-      $uibModalInstance.dismiss('cancel');
-    };   
+    $ctrl.pin = function () {
+      var data = {
+        item : $ctrl.item,
+        action : 'PIN',
+      };
+      $uibModalInstance.close(data, 'PIN');
+    };
   }
 })();

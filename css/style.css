@@ -19,3 +19,7 @@ body {
   font-size: 16px;
   margin-top: 7px;
 }
+
+.detail-wrapper div, .detail-wrapper div a, .detail-wrapper div .ng-binding{
+  font-size: 14px;
+}

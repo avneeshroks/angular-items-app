@@ -1,14 +1,30 @@
 <div class="modal-header">
-  <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+  <h3 class="modal-title" id="modal-title">
+    It's a {{ $ctrl.item.type }}
+  </h3>
 </div>
 <div class="modal-body" id="modal-body">
   <div class="detail-wrapper">
-    <div class="classes">
-      
+    <div class="">
+      {{ $ctrl.item.name }}
+    </div>
+    <div ng-switch="$ctrl.item.type">
+      <div ng-switch-when="image">
+        <div><img ng-src="{{ $ctrl.item.href }}"></div>
+      </div>
+      <div ng-switch-when="text">
+        <div>{{ $ctrl.item.body }}</div>
+      </div>
+      <div ng-switch-when="link">
+        <a ng-href="{{ $ctrl.item.href }}">{{ $ctrl.item.description }}</a>
+      </div>
+      <div ng-switch-default>
+        <span><i class="fa fa-list-alt" aria-hidden="true"></i></span>
+      </div>
     </div>
   </div>
 </div>
 <div class="modal-footer">
-  <button class="btn btn-primary" type="button" ng-click="list.ok()">OK</button>
-  <button class="btn btn-warning" type="button" ng-click="list.cancel()">Cancel</button>
+  <button class="btn btn-success" type="button" ng-click="$ctrl.delete($ctrl.item)">Delete</button>
+  <button class="btn btn-danger" type="button" ng-click="$ctrl.pin($ctrl.item)">Pin</button>
 </div>
